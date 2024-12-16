@@ -12,7 +12,7 @@ import 'api_key.dart';
 
 class TransactionService {
   final AccountService _accountService = AccountService();
-  String url = "https://api.github.com/gists/<id_do_gist_aqui>";
+  String url = "https://api.github.com/gists/f692e28182d11fabd7e12c9d4d479b5d";
 
   Future<void> makeTransaction({
     required String idSender,

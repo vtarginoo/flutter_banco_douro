@@ -10,9 +10,10 @@ class AccountService {
   final StreamController<String> _streamController = StreamController<String>();
   Stream<String> get streamInfos => _streamController.stream;
 
-  String url = "https://api.github.com/gists/<id_do_gist_aqui>";
+   String url = 
+    "https://api.github.com/gists/f692e28182d11fabd7e12c9d4d479b5d";
 
-  Future<List<Account>> getAll() async {
+   Future<List<Account>> getAll() async {
     Response response = await get(
       Uri.parse(url),
       headers: {"Authorization": "Bearer $apiKey"},
@@ -33,6 +34,7 @@ class AccountService {
 
     return listAccounts;
   }
+
 
   addAccount(Account account) async {
     List<Account> listAccounts = await getAll();
