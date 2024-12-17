@@ -32,9 +32,12 @@ class AccountService {
       listAccounts.add(account);
     }
 
+  //print("print do list accounts"); 
+  //print(listAccounts);
+
+
     return listAccounts;
   }
-
 
   addAccount(Account account) async {
     List<Account> listAccounts = await getAll();
@@ -49,7 +52,6 @@ class AccountService {
     }
 
     String content = json.encode(listContent);
-    print(content);
 
     Response response = await post(
       Uri.parse(url),
